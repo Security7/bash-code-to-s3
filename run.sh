@@ -157,7 +157,7 @@ npm_install()
 #
 #   1.  First we need to create the S3 Bucket
 #
-aws s3api create-bucket --bucket $BUCKET --region us-east-1 > /dev/null
+aws s3api create-bucket --bucket $BUCKET --region us-east-2 > /dev/null
 
 #
 #   2.  Iterate through the array of folders
