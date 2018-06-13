@@ -14,23 +14,9 @@
 PATH="~/Library/Python/3.6/bin:$PATH"
 
 #
-#   Save the first parameter as a path to the folder with the lambdas
-#
-DIR=$1
-
-#
 #   Save the name of the bucket where to upload the zip files
 #
-BUCKET=$2
-
-#
-#   Check for the presence of the directory to the lambdas
-#
-if [ -z "${DIR}" ]
-then
-    echo "We are missing the Folder with the Lambdas"
-    exit -1
-fi
+BUCKET=$1
 
 #
 #   Check for the presence of the Bucket name where to upload the zipped code
@@ -49,7 +35,7 @@ LOCAL=$(pwd)
 #
 #   create an array with all the filer/dir inside ~/myDir
 #
-FOLDERS=($DIR*)
+FOLDERS=(../Step_Function_Iterator ../Step_Function_Restart ../Step_Function_Stopwatch ../CloudFlare-To-SumoLogic)
 
 #    ______  _    _  _   _   _____  _______  _____  ____   _   _   _____
 #   |  ____|| |  | || \ | | / ____||__   __||_   _|/ __ \ | \ | | / ____|
@@ -157,7 +143,7 @@ npm_install()
 #
 #   1.  First we need to create the S3 Bucket
 #
-aws s3api create-bucket --bucket $BUCKET --region us-east-2 > /dev/null
+aws s3 mb s3://$BUCKET
 
 #
 #   2.  Iterate through the array of folders
