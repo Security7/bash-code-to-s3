@@ -35,7 +35,7 @@ LOCAL=$(pwd)
 #
 #   create an array with all the filer/dir inside ~/myDir
 #
-FOLDERS=(../Step_Function_Iterator ../Step_Function_Restart ../Step_Function_Stopwatch ../CloudFlare-To-SumoLogic)
+FOLDERS=(../Step_Function_Igniter ../Step_Function_Iterator ../Step_Function_Restart ../Step_Function_Stopwatch ../CloudFlare-To-SumoLogic)
 
 #    ______  _    _  _   _   _____  _______  _____  ____   _   _   _____
 #   |  ____|| |  | || \ | | / ____||__   __||_   _|/ __ \ | \ | | / ____|
